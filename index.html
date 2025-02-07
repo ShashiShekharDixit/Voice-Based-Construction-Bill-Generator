@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-Based Construction Bill Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Voice-Based Construction Bill Generator</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>S.NO</th>
+                <th>Description</th>
+                <th>Rate</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody id="billBody"></tbody>
+    </table>
+    <button onclick="addItem()">➕ Add Item</button>
+    <p><strong>SGST (9%):</strong> <span id="sgst">0</span></p>
+    <p><strong>CGST (9%):</strong> <span id="cgst">0</span></p>
+    <p><strong>Total Amount:</strong> <span id="total">0</span></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
