@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Voice-Based Construction Bill Generator</h2>
+    <h2 id="editableHeading" contenteditable="true">Voice-Based Construction Bill Generator</h2>
+    <button onclick="startHeadingRecognition()" class="mic">🎤</button>
+
     <table>
         <thead>
             <tr>
@@ -38,9 +40,14 @@
             </tr>
         </tfoot>
     </table>
+
     <button onclick="addItem()" id="addItemBtn">➕ Add Item</button>
     <button onclick="finalizeBill()" id="doneBtn">✅ Done</button>
-    <button onclick="printBill()" id="printBtn" class="hide">🖨 Print PDF</button>
+
+    <div id="printContainer">
+        <button id="printBtn" onclick="printBill()">Print PDF</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

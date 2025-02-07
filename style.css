@@ -1,21 +1,119 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 50px;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 table {
-    width: 80%;
+    width: 100%;
+    max-width: 900px;
     margin: auto;
     border-collapse: collapse;
+    table-layout: auto;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
+
 th, td {
-    border: 1px solid #ccc;
+    border: 1px solid black;
     padding: 10px;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
+
+h2 {
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: 2px dashed black;
+    padding: 5px;
+    transition: border 0.3s ease;
+}
+
+.no-underline {
+    border-bottom: none !important;
+}
+
+input, textarea {
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    resize: none;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 5px;
+}
+
 button {
-    margin: 10px;
-    padding: 10px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-.hide { display: none !important; }
-input { width: 100%; border: none; text-align: center; outline: none; }
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.mic {
+    background: transparent;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.hide { 
+    display: none !important; 
+}
+
+#printContainer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+@media print {
+    #printContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 8px;
+    }
+
+    td textarea, td input {
+        font-size: 14px;
+        min-height: 35px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .mic {
+        display: block;
+        margin: 5px auto;
+    }
+}
