@@ -82,13 +82,12 @@ button:hover {
     z-index: 1000;
 }
 
-@media print {
+@media screen and (max-width: 320px) {
+
     #printContainer {
         display: none;
     }
-}
 
-@media screen and (max-width: 340px) {
     table {
         display: block;
         overflow-x: auto;

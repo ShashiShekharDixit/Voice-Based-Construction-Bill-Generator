@@ -66,6 +66,7 @@ function updateTotal() {
     let cgst = totalAmount * 0.09;
     let finalTotal = totalAmount + sgst + cgst;
 
+    document.getElementById("amount").innerText = totalAmount.toFixed(2);  // Added Amount Section
     document.getElementById("sgst").innerText = sgst.toFixed(2);
     document.getElementById("cgst").innerText = cgst.toFixed(2);
     document.getElementById("total").innerText = finalTotal.toFixed(2);
@@ -86,7 +87,6 @@ function printBill() {
     window.print();
     printBtn.style.display = "block";
 }
-
 
 function numberToWordsIndian(num) {
     if (num === 0) return "Zero";
