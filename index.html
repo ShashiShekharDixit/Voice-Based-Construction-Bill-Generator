@@ -19,12 +19,28 @@
             </tr>
         </thead>
         <tbody id="billBody"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"><strong>SGST (9%):</strong></td>
+                <td><span id="sgst">0</span></td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>CGST (9%):</strong></td>
+                <td><span id="cgst">0</span></td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>Total Amount:</strong></td>
+                <td><span id="total">0</span></td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>Total Amount in Words:</strong></td>
+                <td><span id="amountWords"></span></td>
+            </tr>
+        </tfoot>
     </table>
-    <button onclick="addItem()">➕ Add Item</button>
-    <p><strong>SGST (9%):</strong> <span id="sgst">0</span></p>
-    <p><strong>CGST (9%):</strong> <span id="cgst">0</span></p>
-    <p><strong>Total Amount:</strong> <span id="total">0</span></p>
-
+    <button onclick="addItem()" id="addItemBtn">➕ Add Item</button>
+    <button onclick="finalizeBill()" id="doneBtn">✅ Done</button>
+    <button onclick="printBill()" id="printBtn" class="hide">🖨 Print PDF</button>
     <script src="script.js"></script>
 </body>
 </html>
