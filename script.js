@@ -79,6 +79,7 @@ function finalizeBill() {
     document.getElementById("doneBtn").classList.add("hide");
     document.getElementById("editableHeading").classList.add("no-underline");
     document.getElementById("printBtn").classList.remove("hide");
+    document.getElementById("printContainer").style.display = "flex";
 }
 
 function printBill() {
