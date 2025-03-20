@@ -99,13 +99,12 @@ button:hover {
     background-color: #212b88;
 }
 
-@media screen and (max-width: 600px) {
-    /* Initially hide the print button */
+@media screen and (max-width: 320px) {
+
     #printContainer {
         display: none;
     }
 
-    /* Improve table responsiveness */
     table {
         display: block;
         overflow-x: auto;
@@ -133,22 +132,4 @@ button:hover {
         display: block;
         margin: 5px auto;
     }
-
-    /* Prevent bill from cutting off when printing */
-    @media print {
-        body {
-            zoom: 50%; /* Scale down content to fit */
-        }
-
-        table {
-            page-break-before: auto;
-            page-break-after: auto;
-            page-break-inside: avoid; /* Prevents cutting tables */
-        }
-
-        tr, td {
-            page-break-inside: avoid;
-        }
-    }
 }
-
